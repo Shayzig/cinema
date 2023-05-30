@@ -1,0 +1,116 @@
+
+* {
+    box-sizing: border-box;
+}
+:root {
+    --seatsColor: #F3DEBA;
+    --takenSeat: #E74646;
+    --markedSeat: #75a575;
+    --selectedSeat: #726257;
+}
+
+body {
+    background: #010101;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.cinema {
+    width: 600px;
+    margin: 60px auto;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.cell {
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+}
+
+.seat {
+    background-color:var(--seatsColor);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.seat:hover {
+   border: 3px dashed var(--takenSeat);
+   
+}
+
+.selected {
+    background-color:var(--selectedSeat);
+}
+
+.booked {
+    background-color:var(--takenSeat);
+}
+
+.seat.booked:hover {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.popup {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 10px;
+    background-color: var(--selectedSeat);
+    padding: 20px;
+    box-shadow: 0px 1px 56px 12px rgba(0, 0, 0, 0.54);
+}
+
+.popup .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.marked {
+    background-color: var(--markedSeat);
+    border: 1px solid var(--takenSeat);
+}
+
+.popup .btn-book-seat {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--seatsColor);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.5s;
+    margin: auto;
+}
+.popup .btn-book-seat:hover {
+    background-color: var(--markedSeat);
+    width: 120%;
+    height: 120%;
+    margin: auto;
+
+}
+
+.popup h4 button {
+    background-color: transparent;
+    border: none;
+}
+
+h1 {
+    text-shadow: 0px 0px 10px #efcb16;
+    cursor: pointer;
+    
+}
+
+h1:active {
+    color: #E74646;
+}
